@@ -1,0 +1,92 @@
+* { box-sizing: border-box; }
+html, body, #root { min-height: 100%; }
+body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: #262626; background: #fafafa; }
+button, input { font: inherit; }
+button { cursor: pointer; }
+
+/* Instagram-inspired authentication screens */
+.instagram-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 16px;
+  background: linear-gradient(135deg, #405de6 0%, #833ab4 28%, #c13584 52%, #e1306c 68%, #fd1d1d 82%, #fcb045 100%);
+}
+.instagram-login-wrap { width: 100%; max-width: 350px; }
+.instagram-card, .instagram-signup-card {
+  width: 100%; background: #fff; border: 1px solid #dbdbdb; border-radius: 1px;
+}
+.instagram-card { padding: 40px 39px 28px; }
+.instagram-logo {
+  margin: 0 auto 35px; text-align: center; color: #111;
+  font-family: "Brush Script MT", "Segoe Script", cursive;
+  font-size: 42px; font-weight: 700; line-height: 1; letter-spacing: -1.5px;
+}
+.instagram-form { display: grid; gap: 6px; }
+.instagram-form input {
+  width: 100%; height: 38px; padding: 9px 8px; border: 1px solid #dbdbdb;
+  border-radius: 3px; outline: none; background: #fafafa; color: #262626; font-size: 12px;
+}
+.instagram-form input:focus { border-color: #a8a8a8; }
+.instagram-form input::placeholder { color: #8e8e8e; }
+.instagram-login-button {
+  width: 100%; height: 32px; margin-top: 8px; border: 0; border-radius: 8px;
+  background: #0095f6; color: #fff; font-size: 14px; font-weight: 700;
+}
+.instagram-login-button:hover { background: #1877f2; }
+.instagram-divider { display: flex; align-items: center; gap: 17px; margin: 21px 0 25px; color: #737373; }
+.instagram-divider span { height: 1px; flex: 1; background: #dbdbdb; }
+.instagram-divider b { font-size: 12px; font-weight: 700; }
+.facebook-login, .forgot-password, .instagram-signup-link, .instagram-back-link { border: 0; background: transparent; }
+.facebook-login { display: flex; align-items: center; justify-content: center; width: 100%; padding: 0; color: #385185; font-size: 14px; font-weight: 700; }
+.facebook-icon { display: inline-flex; align-items: flex-end; justify-content: center; width: 16px; height: 16px; margin-right: 7px; border-radius: 2px; background: #385185; color: #fff; font-size: 14px; font-weight: 700; line-height: 17px; }
+.forgot-password { display: block; margin: 22px auto 0; padding: 0; color: #00376b; font-size: 12px; }
+.instagram-error { margin-top: 12px; color: #ed4956; text-align: center; font-size: 12px; }
+.instagram-signup-card { display: flex; justify-content: center; align-items: center; gap: 5px; min-height: 63px; margin-top: 10px; padding: 16px; font-size: 14px; }
+.instagram-signup-link { padding: 0; color: #0095f6; font-weight: 700; }
+.instagram-footer { margin-top: 24px; color: #fff; text-align: center; font-size: 11px; text-shadow: 0 1px 2px rgba(0,0,0,.2); }
+
+/* Registration screen */
+.instagram-register-card { padding: 34px 39px 30px; }
+.instagram-register-card .instagram-logo { margin-bottom: 20px; }
+.instagram-register-title { margin: 0 0 20px; text-align: center; color: #737373; font-size: 16px; font-weight: 600; line-height: 20px; }
+.instagram-register-form { display: grid; gap: 6px; }
+.instagram-register-form input { width: 100%; height: 38px; padding: 9px 8px; border: 1px solid #dbdbdb; border-radius: 3px; outline: none; background: #fafafa; font-size: 12px; }
+.instagram-register-form input:focus { border-color: #a8a8a8; }
+.instagram-register-form button { height: 32px; margin-top: 8px; border: 0; border-radius: 8px; background: #0095f6; color: #fff; font-size: 14px; font-weight: 700; }
+.instagram-register-note { margin: 18px 0 0; color: #737373; text-align: center; font-size: 11px; line-height: 16px; }
+.instagram-success { margin-top: 12px; color: #16883b; text-align: center; font-size: 12px; }
+.instagram-back-link { display: block; margin: 20px auto 0; padding: 0; color: #00376b; font-size: 12px; }
+
+/* Instagram-like logged-in page */
+.instagram-app-page { min-height: 100vh; background: #fafafa; }
+.instagram-navbar { height: 60px; background: #fff; border-bottom: 1px solid #dbdbdb; display: flex; align-items: center; justify-content: space-between; padding: 0 22px; position: sticky; top: 0; z-index: 5; }
+.nav-logo { font-family: "Brush Script MT", "Segoe Script", cursive; font-size: 29px; font-weight: 700; color: #111; }
+.nav-logout { border: 0; background: transparent; color: #0095f6; font-size: 14px; font-weight: 700; }
+.instagram-profile { max-width: 935px; margin: 0 auto; padding: 40px 20px; }
+.profile-head { display: flex; align-items: center; gap: 48px; padding-bottom: 44px; border-bottom: 1px solid #dbdbdb; }
+.profile-avatar { width: 150px; height: 150px; border-radius: 50%; display: grid; place-items: center; background: linear-gradient(135deg, #fdf497, #fd5949, #d6249f, #285aeb); padding: 5px; flex: 0 0 auto; }
+.profile-avatar-inner { width: 100%; height: 100%; border-radius: 50%; display: grid; place-items: center; background: #fff; color: #0095f6; font-size: 50px; font-weight: 700; }
+.profile-info { flex: 1; }
+.profile-username { display: flex; align-items: center; gap: 18px; margin-bottom: 20px; }
+.profile-username h1 { margin: 0; font-size: 28px; font-weight: 400; }
+.profile-logout { border: 1px solid #dbdbdb; border-radius: 8px; background: #fff; padding: 7px 16px; font-size: 14px; font-weight: 600; }
+.profile-stats { display: flex; gap: 38px; margin-bottom: 18px; font-size: 16px; }
+.profile-bio strong { display: block; margin-bottom: 5px; }
+.profile-bio span { color: #555; }
+.profile-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px; padding-top: 20px; }
+.profile-post { aspect-ratio: 1; background: linear-gradient(135deg, #405de6, #c13584, #fd1d1d, #fcb045); display: grid; place-items: center; color: #fff; font-size: 30px; }
+
+.loading { min-height: 100vh; display: grid; place-items: center; background: #fafafa; font-size: 16px; }
+
+@media (max-width: 600px) {
+  .instagram-page { align-items: flex-start; padding-top: 30px; }
+  .instagram-card, .instagram-register-card { border: 0; padding-left: 38px; padding-right: 38px; }
+  .instagram-signup-card { border: 0; }
+  .profile-head { flex-direction: column; align-items: flex-start; gap: 25px; }
+  .profile-avatar { width: 90px; height: 90px; }
+  .profile-avatar-inner { font-size: 30px; }
+  .profile-stats { gap: 18px; flex-wrap: wrap; }
+  .profile-grid { grid-template-columns: repeat(3, 1fr); }
+}
